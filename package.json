@@ -18,6 +18,12 @@
     "coverage": "istanbul cover test",
     "coveralls": "npm run coverage && cat ./coverage/lcov.info | coveralls"
   },
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE",
+    "History.md"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/jstransformers/jstransformer-swig.git"
