@@ -7,7 +7,7 @@
     "swig"
   ],
   "dependencies": {
-    "swig": "~1.4.2"
+    "swig": "git://github.com/TimothyGu/swig.git#patch-1"
   },
   "devDependencies": {
     "coveralls": "^2.11.2",
