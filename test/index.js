@@ -21,7 +21,7 @@ function assertEqual(output, expected) {
 var input = fs.readFileSync(__dirname + '/input.html.swig', 'utf8');
 var expected = fs.readFileSync(__dirname + '/expected.html', 'utf8');
 
-var options = {
+var locals = {
   title: 'Basic Example',
   people: [
     {
@@ -37,9 +37,14 @@ var options = {
       age: 45
     }
   ]
-}
-var output = transform.render(input, options);
+};
+var output = transform.compile(input)(locals);
 fs.writeFileSync(__dirname + '/output.html', output);
 assertEqual(output, expected);
 
-console.log('test passed');
+if (failed) {
+  console.log('tests FAILED');
+  process.exit(1);
+} else {
+  console.log('tests PASSED');
+}
