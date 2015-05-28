@@ -11,7 +11,7 @@
   ],
   "dependencies": {
     "promise": "^7.0.1",
-    "swig": "~1.4.2"
+    "swig": "git://github.com/TimothyGu/swig.git#patch-1"
   },
   "devDependencies": {
     "istanbul": "^0.3.14",

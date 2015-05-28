@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.1.1
+
+- Switch to [TimothyGu's fork of Swig](https://github.com/paularmstrong/swig/pull/579)
+
 ## v0.1.0
 
 - Updated dependencies
