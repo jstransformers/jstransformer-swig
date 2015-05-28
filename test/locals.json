@@ -1,0 +1,17 @@
+{
+  "title": "Basic Example",
+  "people": [
+    {
+      "name": "Paul",
+      "age": 28
+    },
+    {
+      "name": "Jane",
+      "age": 26
+    },
+    {
+      "name": "Jimmy",
+      "age": 45
+    }
+  ]
+}

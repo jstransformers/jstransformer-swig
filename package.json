@@ -1,32 +1,29 @@
 {
   "name": "jstransformer-swig",
-  "version": "0.0.2",
-  "description": "Transform Swig template into HTML.",
+  "version": "0.1.0",
+  "description": "Swig support for JSTransformers.",
   "keywords": [
     "jstransformer",
     "swig"
   ],
+  "files": [
+    "index.js"
+  ],
   "dependencies": {
+    "promise": "^7.0.1",
     "swig": "~1.4.2"
   },
   "devDependencies": {
-    "coveralls": "^2.11.2",
-    "istanbul": "^0.3.5"
+    "istanbul": "^0.3.14",
+    "testit": "^2.0.2"
   },
   "scripts": {
     "test": "node test",
-    "coverage": "istanbul cover test",
-    "coveralls": "npm run coverage && cat ./coverage/lcov.info | coveralls"
+    "coverage": "istanbul cover test"
   },
-  "files": [
-    "index.js",
-    "README.md",
-    "LICENSE",
-    "History.md"
-  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jstransformers/jstransformer-swig.git"
+    "url": "https://github.com/jstransformers/jstransformer-foo.git"
   },
   "author": "Rob Loach <robloach@gmail.com>",
   "license": "MIT"

@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.0.x
+
+- Updated dependencies
+
 ## v0.0.2: March 29th, 2015
 
 - Use `'html'` as output format
