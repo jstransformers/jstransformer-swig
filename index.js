@@ -10,7 +10,17 @@ function getSwig(options) {
   var opts = options || {};
   var engine = new swig.Swig(opts);
   for (var name in opts.filters || {}) {
-    engine.setFilter(name, opts.filters[name]);
+    var filter = null;
+    switch (typeof opts.filters[name]) {
+      case "string":
+        filter = require(opts.filters[name]);
+        break;
+      case "function":
+      default:
+        filter = opts.filters[name];
+        break;
+    }
+    engine.setFilter(name, filter);
   }
 
   return engine;
