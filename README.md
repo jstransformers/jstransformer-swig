@@ -14,11 +14,11 @@
 ## API
 
 ```js
-var foo = require('jstransformer')(require('jstransformer-foo'))
+var swig = require('jstransformer')(require('jstransformer-swig'))
 
 var locals = { title: "Hello World" };
 
-foo.render('<h1>{{ title }}</h1>', {}, locals).body
+swig.render('<h1>{{ title }}</h1>', locals).body
 //=> '<h1>Hello World!</h1>'
 ```
 
