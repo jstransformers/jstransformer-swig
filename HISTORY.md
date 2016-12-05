@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.2.0
+
+- Update Boilerplate
+
 ## v0.1.2
 
 - Switch to [TimothyGu's fork of Swig](https://github.com/paularmstrong/swig/pull/579)
