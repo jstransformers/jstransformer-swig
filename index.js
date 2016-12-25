@@ -1,46 +1,49 @@
-'use strict';
+'use strict'
 
-var swig = require('swig');
-var Promise = require('promise');
+var swig = require('swig')
+var Promise = require('promise')
 
-exports.name = 'swig';
-exports.outputFormat = 'html';
+exports.name = 'swig'
+exports.outputFormat = 'html'
 
 function getSwig(options) {
-  var opts = options || {};
-  var engine = new swig.Swig(opts);
+  var opts = options || {}
+  var engine = new swig.Swig(opts)
   for (var name in opts.filters || {}) {
-    var filter = null;
-    switch (typeof opts.filters[name]) {
-      case "string":
-        filter = require(opts.filters[name]);
-        break;
-      case "function":
-      default:
-        filter = opts.filters[name];
-        break;
+    if ({}.hasOwnProperty.call(opts.filters, name)) {
+      var filter
+      switch (typeof opts.filters[name]) {
+        case 'string':
+          // eslint-disable-next-line import/no-dynamic-require
+          filter = require(opts.filters[name])
+          break
+        case 'function':
+        default:
+          filter = opts.filters[name]
+          break
+      }
+      engine.setFilter(name, filter)
     }
-    engine.setFilter(name, filter);
   }
 
-  return engine;
+  return engine
 }
 
 exports.compile = function (str, options) {
-  return getSwig(options).compile(str);
-};
+  return getSwig(options).compile(str)
+}
 
 exports.compileFile = function (file, options) {
-  return getSwig(options).compileFile(file);
-};
+  return getSwig(options).compileFile(file)
+}
 
 exports.compileFileAsync = function (file, options) {
-  return new Promise(function (fulfill, reject) {
+  return new Promise(function (resolve, reject) {
     getSwig(options).compileFile(file, {}, function (err, template) {
       if (err) {
-        return reject(err);
+        return reject(err)
       }
-      return fulfill(template);
-    });
-  });
-};
+      return resolve(template)
+    })
+  })
+}
