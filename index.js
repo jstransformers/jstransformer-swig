@@ -1,17 +1,16 @@
 'use strict'
 
-var swig = require('swig')
-var Promise = require('promise')
+const swig = require('swig')
 
 exports.name = 'swig'
 exports.outputFormat = 'html'
 
 function getSwig(options) {
-  var opts = options || {}
-  var engine = new swig.Swig(opts)
-  for (var name in opts.filters || {}) {
+  const opts = options || {}
+  const engine = new swig.Swig(opts)
+  for (const name in opts.filters || {}) {
     if ({}.hasOwnProperty.call(opts.filters, name)) {
-      var filter
+      let filter
       switch (typeof opts.filters[name]) {
         case 'string':
           // eslint-disable-next-line import/no-dynamic-require
@@ -38,8 +37,8 @@ exports.compileFile = function (file, options) {
 }
 
 exports.compileFileAsync = function (file, options) {
-  return new Promise(function (resolve, reject) {
-    getSwig(options).compileFile(file, {}, function (err, template) {
+  return new Promise((resolve, reject) => {
+    getSwig(options).compileFile(file, {}, (err, template) => {
       if (err) {
         return reject(err)
       }
