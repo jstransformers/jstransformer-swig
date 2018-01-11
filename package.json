@@ -1,6 +1,9 @@
 {
+  "dependencies": {
+    "swig": "git://github.com/TimothyGu/swig.git#patch-1"
+  },
   "name": "jstransformer-swig",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Swig support for JSTransformers.",
   "keywords": [
     "jstransformer",
@@ -9,13 +12,9 @@
   "files": [
     "index.js"
   ],
-  "dependencies": {
-    "promise": "^7.0.1",
-    "swig": "git://github.com/TimothyGu/swig.git#patch-1"
-  },
   "devDependencies": {
     "test-jstransformer": "^1.0.0",
-    "xo": "^0.18.1"
+    "xo": "*"
   },
   "scripts": {
     "coverage": "test-jstransformer coverage",
@@ -27,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jstransformers/jstransformer-foo.git"
+    "url": "https://github.com/jstransformers/jstransformer-swig.git"
   },
   "author": {
     "name": "JSTransformers Team",
