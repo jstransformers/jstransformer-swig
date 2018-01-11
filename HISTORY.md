@@ -1,6 +1,6 @@
 # Changelog
 
-## v2.0.0: 2018-01-12
+## v1.0.0: 2018-01-12
 
 - Switched to [`swig-templates`](https://www.npmjs.com/package/swig-templates)
   - Suggestion from [@ismay](https://github.com/ismay)
