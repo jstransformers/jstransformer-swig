@@ -1,6 +1,6 @@
 # jstransformer-swig
 
-[Swig](https://paularmstrong.github.io/swig/) support for [JSTranformers](https://github.com/jstransformers/jstransformer).
+[swig-templates](https://www.npmjs.com/package/swig-templates) support for [JSTranformers](https://github.com/jstransformers/jstransformer).
 
 [![Build Status](https://img.shields.io/travis/jstransformers/jstransformer-swig/master.svg)](https://travis-ci.org/jstransformers/jstransformer-swig)
 [![Coverage Status](https://img.shields.io/codecov/c/github/jstransformers/jstransformer-swig/master.svg)](https://codecov.io/gh/jstransformers/jstransformer-swig)
