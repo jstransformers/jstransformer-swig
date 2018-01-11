@@ -1,6 +1,6 @@
 'use strict'
 
-const swig = require('swig')
+const swig = require('swig-templates')
 
 exports.name = 'swig'
 exports.outputFormat = 'html'

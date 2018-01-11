@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "swig": "git://github.com/TimothyGu/swig.git#patch-1"
+    "swig-templates": "^2.0.2"
   },
   "name": "jstransformer-swig",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "Swig support for JSTransformers.",
   "keywords": [
     "jstransformer",
