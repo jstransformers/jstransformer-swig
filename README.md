@@ -1,7 +1,5 @@
 # jstransformer-swig
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/jstransformers/jstransformer-swig.svg)](https://greenkeeper.io/)
-
 [Swig](https://paularmstrong.github.io/swig/) support for [JSTranformers](https://github.com/jstransformers/jstransformer).
 
 [![Build Status](https://img.shields.io/travis/jstransformers/jstransformer-swig/master.svg)](https://travis-ci.org/jstransformers/jstransformer-swig)
