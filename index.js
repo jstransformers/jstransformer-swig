@@ -13,7 +13,6 @@ function getSwig(options) {
       let filter
       switch (typeof opts.filters[name]) {
         case 'string':
-          // eslint-disable-next-line import/no-dynamic-require
           filter = require(opts.filters[name])
           break
         case 'function':
@@ -21,6 +20,7 @@ function getSwig(options) {
           filter = opts.filters[name]
           break
       }
+
       engine.setFilter(name, filter)
     }
   }
@@ -42,6 +42,7 @@ exports.compileFileAsync = function (file, options) {
       if (err) {
         return reject(err)
       }
+
       return resolve(template)
     })
   })
